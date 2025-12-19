@@ -4,18 +4,19 @@ import { cn } from "../lib/utils";
 function ThemeToggle()
 {
     const [isDark,setDark] = useState(true)
-    useEffect (()=> {
-        const storedTheme = localStorage.getItem("theme")
-        if(storedTheme === "dark")
-        {
-            setDark(true)
-            document.documentElement.classList.add("dark");
-        }
-        else{
-            localStorage.setItem("theme" ,"light");
-            setDark(false);
-        }
-    },[])
+     useEffect(() => {
+    const theme = localStorage.getItem('theme') || 'dark';
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      setDark(true);
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      setDark(false);
+    }
+  }, []);
+
+  if (isDark === null) return null;
     function handleTheme()
     {
         if(isDark)
