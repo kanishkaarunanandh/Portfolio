@@ -14,8 +14,8 @@ const projects = [
         Titel: "Silk Saree E-commerce Website",
         Description: "An e-commerce website being developed for a silk saree business. The application includes product listings, categories, and a user-friendly interface built from Figma designs. Currently working on backend APIs, frontend integration, and improving overall functionality based on client feedback.",
         image: "/images/silksaree.png",
-        tags: ["Springboot" ,"Vue Js" , "PostgreSQL" ,"Vuetify"],
-        demoUrl: "#",
+        tags: ["Springboot" ,"Vue Js" , "REST API" ,"Vuetify"],
+        demoUrl: "https://srishakram-frontend-v2.vercel.app",
         gitHubUrl: "#"
     },
     {
